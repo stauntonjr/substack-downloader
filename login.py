@@ -16,7 +16,7 @@ def run():
     print("Launching browser for login...")
     with sync_playwright() as p:
         # Launch Chrome (non-headless so user can see and interact)
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
